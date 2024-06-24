@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Atropelamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sign-container">
+        <form id="atropelamentoForm">
+            <img src="https://i.ibb.co/Bwqqv2h/placa2.png" alt="placacapivara" border="0">
+            <h2>Cadastro de Atropelamentos</h2>
+            <select name="especie" id="especie" required>
+                <option value="" disabled selected>Espécie do animal</option>
+            </select>
+            <select name="tipopav" id="tipopav" required>
+                <option value="" disabled selected>Tipo de Pavimento</option>
+            </select>
+            <select name="rodovia" id="rodovia" required>
+                <option value="" disabled selected>Rodovia</option>
+            </select>
+            <select name="uf" id="uf" required>
+                <option value="" disabled selected>Unidade Federativa</option>
+            </select>
+            <label class="checkwater">
+                <p>Havia água na pista?</p>
+                <input type="checkbox" id="agua" name="agua_na_pista">
+            </label>
+            <input type="datetime-local" name="data_hora" required>
+            <input type="number" name="quilometro" placeholder="Quilômetro" required>
+            <input type="number" name="numero_pistas" placeholder="Número de Pistas" required>
+            <input type="number" name="velocidade_maxima" placeholder="Velocidade Máxima (km/h)" required>
+            <input type="text" name="situacao_animal" placeholder="Situação final do animal" required>
+            <input type="submit" value="Cadastrar">
+            <div id="message"></div> <!-- Adicione essa linha para a mensagem -->
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

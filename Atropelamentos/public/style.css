@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: url("https://cdn.pixabay.com/photo/2020/07/08/10/17/car-5383371_960_720.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.sign-container {
+    background-color: #fafafa;
+    width: calc(100% - 105px);
+    height: calc(100% - 75px);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: calc(100% - 150px);
+    height: calc(100% - 80px);
+    padding-top: 10px;
+    padding-bottom: 120px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 4px;
+    margin-top: -20px;
+}
+
+input[type="text"], input[type="number"], input[type="datetime-local"], select, input[type="checkbox"] {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: calc(100% - 30px);
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #07630f;
+}
+
+.checkwater {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 17px;
+    margin-right: 10px;
+    font-size: 13px;
+    width: calc(100% - 30px);
+    margin-bottom: 10px;
+}
+
+.checkwater p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.checkwater input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+/* Adicionando a imagem e título do formulário */
+.sign-container img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+/* Adicione no final do seu arquivo CSS */
+#message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}
+
+#message.error {
+    color: red;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados de Atropelamento</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="sign-container">
+        <img src="https://i.ibb.co/Bwqqv2h/placa2.png" alt="placacapivara" border="0">
+        <h1>Atropelamentos Cadastrados</h1>
+
+        <div class="table-container">
+            <table> 
+                <thead>
+                    <tr>
+                        <th>Espécie do Animal</th>
+                        <th>Tipo de Pavimento</th>
+                        <th>Rodovia</th>
+                        <th>Unidade Federativa</th>
+                        <th>Água na Pista</th>
+                        <th>Data e Hora</th>
+                        <th>Quilômetro</th>
+                        <th>Número de Pistas</th>
+                        <th>Velocidade Máxima (km/h)</th>
+                        <th>Situação Final do Animal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% atropelamentos.forEach(atropelamento => { %>
+                    <tr>
+                        <td><%= atropelamento.nomeespecie %></td>
+                        <td><%= atropelamento.pavimento %></td>
+                        <td><%= atropelamento.rodovia %></td>
+                        <td><%= atropelamento.nomeUF %></td>
+                        <td><%= atropelamento.Haagua ? 'Verdadeiro' : 'Falso' %></td>
+                        <td><%= new Date(atropelamento.DataAtrop).toLocaleDateString('pt-BR') + ' ' + atropelamento.HoraAtrop %></td>
+                        <td><%= atropelamento.Km %></td>
+                        <td><%= atropelamento.NumPistas %></td>
+                        <td><%= atropelamento.VelMax %></td>
+                        <td><%= atropelamento.situacao %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
